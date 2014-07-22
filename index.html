@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jQuery</title>
+        <meta name="description" content="Presentation for RWD">
+        <meta name="author" content="Nikhil AM">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link id="theme" rel="stylesheet" href="css/custom.css">        
+
+        <link rel="stylesheet" href="js/lib/css/zenburn.css">
+
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <header>
+                        <img src="img/jquery.png" alt="jQuery Logo">
+                        <h2>jQuery</h2>
+                    </header>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h3>Introduction</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>What&nbsp;&nbsp;is&nbsp;&nbsp;jQuery?</h4>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>The&nbsp;&nbsp;Father&nbsp;&nbsp;of&nbsp;&nbsp;jQuery</h4>
+                        </header>
+                        <figure>
+                            <a href="http://ejohn.org/" class="image">
+                                <img src="img/john_resig.png" alt="John Resig">
+                            </a>
+                            <figcaption>The Guy From RIT, Dean of CS Dept <a href="https://www.khanacademy.org/cs">Khan's Academy</a></figcaption>
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>What&nbsp;&nbsp;is&nbsp;&nbsp;sizzle?</h4>
+                        </header>
+                        <figure>
+                            <img src="img/sizzle.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>To&nbsp;&nbsp;Do&nbsp;&nbsp;or&nbsp;&nbsp;Not&nbsp;&nbsp;To&nbsp;&nbsp;Do</h4>
+                        </header>
+                        <figure>
+                            <img src="img/hamlet.png" alt="jQuery Hamlet">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>Choose&nbsp;&nbsp;Wisely</h4>
+                        </header>
+                        <figure>
+                            <img src="img/red_vs_blue.png" alt="Red Vs Blue">
+                            <figcaption>
+                                This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes
+                            </figcaption>
+                        </figure>
+                    </section>
+                </section>
+                <section>
+                    <header>
+                        <h3>jQuery().ready();</h3>
+                    </header>
+                </section>
+                <section>
+                    <header>
+                        <h3>DOM&nbsp;&nbsp;Manipulation</h3>
+                    </header>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h3>Event&nbsp;&nbsp;Handling</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>Event&nbsp;&nbsp;Bubbling</h4>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>How&nbsp;&nbsp;to&nbsp;&nbsp;bind&nbsp;&nbsp;events?</h4>
+                        </header>
+                        <ul>
+                            <li>
+                                <p>Inline</p>
+                                <pre class="xml"><code>
+&lt;input type="submit" name="submit" value="Submit" onSubmit="validate_form()"&gt;
+                                </code></pre>
+                            </li>
+                            <li>
+                                <p>Specific</p>
+                                <pre class="javascript"><code>
+$('input[type="submit"]').submit(function(event){
+    .......
+});
+                                </code></pre>
+                            </li>
+                            <li>
+                                <p>Delegate</p>
+                                <pre class="javascript"><code>
+$('form').on('submit', 'input[type="submit"]', function(event){
+    .....
+});
+                                </code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="img/chakravyuha.svg" alt="Chakravyūha">                            
+                    </section>
+                    <section>
+                        <header>
+                            <h4>How&nbsp;&nbsp;to&nbsp;&nbsp;unbind&nbsp;&nbsp;events?</h4>
+                        </header>
+                        <ul>
+                            <li>
+                                <p>Unbind All</p>
+                                <pre class="javascript"><code>
+$('form').off();
+                                </code></pre>
+                            </li>
+                            <li>
+                                <p>Unbind Specific Events</p>
+                                <pre class="javascript"><code>
+$('form').off('submit');
+                                </code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h3>jQuery.ajax();</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>Commonly&nbsp;&nbsp;Used&nbsp;&nbsp;Options</h4>
+                        </header>
+                        <pre class="javascript"><code>
+jQuery.ajax({
+    url         : URL,
+
+    type        : "Default: GET|POST|PUT|DELETE",
+
+    dataType    : "xml|html|script|json",
+
+    contentType : "Default: application/x-www-form-urlencoded|text/json|text/xml",
+
+    success     : function(data){
+        console.log("Successful Request");
+    },
+
+    error       : function(data){
+        console.log("Oops!! Something went wrong");
+    },
+
+    complete    : function(data){
+        console.log("Executed when the call is completed");
+    }
+});
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>Deferred&nbsp;&nbsp;Objects&nbsp;&nbsp;from&nbsp;&nbsp;the&nbsp;&nbsp;Promise&nbsp;&nbsp;Land</h4>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Ajax Promises</h3>
+                        </header>
+                        <pre class="javascript"><code>
+jQuery.ajax({
+    ....
+}).done(function(data){
+   console.log("Successful Request"); 
+}).fail(function(data){
+    console.log("Oops!! Something went wrong");
+}).always(function(data){
+    console.log("Executed when the call is completed");
+});
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h3>Cross&nbsp;&nbsp;Domain&nbsp;&nbsp;Requests</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>CDR Options</h4>
+                        </header>
+                        <ul>
+                            <li>JSON-P</li>
+                            <li>CORS(Cross-Origin Resource Sharing)</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <header id="text" class="shot">
+                        <h1>Q</h1>
+                    </header>
+                    <header  id="shooter" class="shot">
+                        <h1>j</h1>
+                    </header>
+                </section>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/lib/js/head.min.js"></script>
+        <script type="text/javascript" src="js/vendor/reveal.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
